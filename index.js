@@ -1,3 +1,3 @@
-var safejson = require("./safejson");
+var safejson = require("./lib/safejson");
 
 exports.safejson = safejson;
