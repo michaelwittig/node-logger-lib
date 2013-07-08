@@ -23,6 +23,9 @@ function Endpoint(debug, info, error, critical, name) {
 }
 util.inherits(Endpoint, events.EventEmitter);
 Endpoint.prototype.stop = function(callback) {
+	if (this.stopping === true) {
+		callback(new Error("Already stopped"));
+	}
 	this.stopping = true;
 	var self = this;
 	this._stop(function(err) {
