@@ -42,7 +42,11 @@ Endpoint.prototype.stop = function(callback) {
 	});
 };
 Endpoint.prototype.log = function(log, callback) {
-	this._log(log, callback);
+	if (this.stopping === false && this.stopped == false) {
+		this._log(log, callback);
+	} else {
+		callback(new Error("Endpoint is not started"));
+	}
 };
 
 exports.safejson = safejson;
