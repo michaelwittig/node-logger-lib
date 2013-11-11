@@ -10,6 +10,9 @@
                                                                       \_/__/  \_/__/
 `````
 
+[![Build Status](https://secure.travis-ci.org/cinovo/node-logger-lib.png)](http://travis-ci.org/cinovo/node-logger-lib)
+[![NPM version](https://badge.fury.io/js/cinovo-logger-lib.png)](http://badge.fury.io/js/cinovo-logger-lib)
+
 # cinovo-logger-lib
 
 Visit [cinovo-logger](https://github.com/cinovo/node-logger).
