@@ -4,6 +4,7 @@ var events = require("events"),
 	safejson = require("./lib/safejson");
 
 function Endpoint(debug, info, error, critical, name) {
+	"use strict";
 	assert.bool(debug, "debug");
 	assert.bool(info, "info");
 	assert.bool(error, "error");
@@ -23,6 +24,7 @@ function Endpoint(debug, info, error, critical, name) {
 }
 util.inherits(Endpoint, events.EventEmitter);
 Endpoint.prototype.stop = function(callback) {
+	"use strict";
 	if (this.stopping === true) {
 		callback(new Error("Already stopped"));
 	}
@@ -42,7 +44,8 @@ Endpoint.prototype.stop = function(callback) {
 	});
 };
 Endpoint.prototype.log = function(log, callback) {
-	if (this.stopping === false && this.stopped == false) {
+	"use strict";
+	if (this.stopping === false && this.stopped === false) {
 		this._log(log, callback);
 	} else {
 		callback(new Error("Endpoint is not started"));

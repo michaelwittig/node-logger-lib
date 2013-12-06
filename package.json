@@ -1,6 +1,6 @@
 {
 	"name": "cinovo-logger-lib",
-	"version": "0.4.3",
+	"version": "0.4.4",
 	"description": "Libraries for cinovo-logger and it's endpoints.",
 	"keywords": [
 		"lib"
@@ -20,11 +20,11 @@
 		"url": "https://github.com/cinovo/node-logger-lib.git"
 	},
 	"dependencies": {
-		"assert-plus": "0.1.4"
+		"assert-plus": "0.1.5"
 	},
 	"devDependencies": {
-		"mocha": "1.13.0",
-		"jslint": "0.2.0",
+		"mocha": "1.15.1",
+		"jslint": "0.2.5",
 		"madge": "0.1.7",
 		"npmedge": "0.1.4"
 	},
