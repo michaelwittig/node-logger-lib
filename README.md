@@ -16,5 +16,54 @@
 
 # cinovo-logger-lib
 
-Visit [cinovo-logger](https://github.com/cinovo/node-logger).
+Shared code used by all [cinovo-logger](https://github.com/cinovo/node-logger) endpoints.
 
+## Custom Endpoint
+
+You must extend the require("cinovo-logger-lib").Endpoint.
+
+`````javascript
+var lib = require("cinovo-logger-lib");
+function CustomEndpoint(debug, info, error, critical) {
+	lib.Endpoint.call(this, debug, info, error, critical, "customName");
+}
+util.inherits(CustomEndpoint, lib.Endpoint);
+`````
+
+And you must implement at least this two methods:
+
+`````javascript
+CustomEndpoint.prototype._log = function(log, callback) {
+	// write the log object and call the callback if the log is written
+	callback();
+};
+CustomEndpoint.prototype._stop = function(callback) {
+	// stop the endpoint, call the callback if finished and all logs are written
+	callback();
+};
+`````
+
+### API
+
+#### stop(callback)
+
+Stop endpoint to avoid data loss.
+
+* `callback`: Function(err)
+    * `err`: Error
+
+#### log(log, callback)
+
+* `log`: Log https://github.com/cinovo/node-logger#log
+* `callback`: Function(err)
+    * `err`: Error
+
+### Events
+
+#### stop()
+
+Endpoint was stopped.
+
+#### stopping()
+
+Endpoint is stopping.

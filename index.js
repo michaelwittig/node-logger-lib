@@ -27,8 +27,10 @@ Endpoint.prototype.stop = function(callback) {
 	"use strict";
 	if (this.stopping === true) {
 		callback(new Error("Already stopped"));
+		return;
 	}
 	this.stopping = true;
+	this.emit("stopping");
 	var self = this;
 	this._stop(function(err) {
 		if (err) {
