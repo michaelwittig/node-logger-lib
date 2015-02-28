@@ -10,13 +10,13 @@
                                                                       \_/__/  \_/__/
 `````
 
-[![Build Status](https://secure.travis-ci.org/cinovo/node-logger-lib.png)](http://travis-ci.org/cinovo/node-logger-lib)
+[![Build Status](https://secure.travis-ci.org/michaelwittig/node-logger-lib.png)](http://travis-ci.org/michaelwittig/node-logger-lib)
 [![NPM version](https://badge.fury.io/js/cinovo-logger-lib.png)](http://badge.fury.io/js/cinovo-logger-lib)
-[![NPM dependencies](https://david-dm.org/cinovo/node-logger-lib.png)](https://david-dm.org/cinovo/node-logger-lib)
+[![NPM dependencies](https://david-dm.org/michaelwittig/node-logger-lib.png)](https://david-dm.org/michaelwittig/node-logger-lib)
 
 # cinovo-logger-lib
 
-Shared code used by all [cinovo-logger](https://github.com/cinovo/node-logger) endpoints.
+Shared code used by all [cinovo-logger](https://github.com/michaelwittig/node-logger) endpoints.
 
 ## Custom Endpoint
 
@@ -54,7 +54,7 @@ Stop endpoint to avoid data loss.
 
 #### log(log, callback)
 
-* `log`: Log https://github.com/cinovo/node-logger#log
+* `log`: Log https://github.com/michaelwittig/node-logger#log
 * `callback`: Function(err)
     * `err`: Error
 
